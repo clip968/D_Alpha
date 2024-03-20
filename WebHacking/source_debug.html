@@ -1,0 +1,36 @@
+</!DOCTYPE html>
+<html>
+<head>
+    <title>JS Debug</title>
+</head>
+<body>
+    <input type='text' id='input-name' placeholder='name'><br/>
+    <input type='text' id='input-num' placeholder='num'><br/>
+    <!-- 버튼 클릭 시 button_click함수가 실행됩니다. -->
+    <input type='button' onclick='button_click()' value="Click">
+<script>
+    /*
+     name과 num에 대한 변수를 검증하는 함수입니다.
+     name이 'dreamhack', num이 31337인 경우 "congratulations !" 문자열을 출력합니다.
+    */
+    function compare(name, num){
+        if(name == 'dreamhack'){
+            if(num == 31337){
+                console.log("congratulations !");
+                return;
+            }
+        }
+        console.log("No !");
+    }
+    /*
+     버튼 클릭 시 실행되는 함수입니다.
+     'input-name', 'input-num'의 값을 가져와 compare함수를 실행합니다.
+    */
+    function button_click() {
+        var name = document.getElementById('input-name').value;
+        var num = parseInt(document.getElementById('input-num').value);
+        compare(name, num);
+    }
+</script>
+</body>
+</html>
