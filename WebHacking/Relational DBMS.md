@@ -156,7 +156,7 @@ import string
 # example URL
 url = 'http://example.com/login'
 params = { 'uid': '',
-		  'upw': ''}
+	   'upw': ''}
 
 #abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~
 tc = string.ascii_letters + string.digits + string.punctuation
@@ -554,11 +554,11 @@ MongoDB는 Json 형태인 도큐먼트(document)를 저장하며 다음과 같�
 
 ### SQL
 
-|   |   |
-|---|---|
-||UPDATE account SET user_id="guest2" WHERE user_idx=2;|
+|     |                                                       |
+| --- | ----------------------------------------------------- |
+|     | UPDATE account SET user_id="guest2" WHERE user_idx=2; |
+|     |                                                       |
 
-![](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjkiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAyOSAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxIDAuNUgzQzEuMzUgMC41IDAgMS44NSAwIDMuNVYyNC41SDNWMy41SDIxVjAuNVpNMjUuNSA2LjVIOUM3LjM1IDYuNSA2IDcuODUgNiA5LjVWMzAuNUM2IDMyLjE1IDcuMzUgMzMuNSA5IDMzLjVIMjUuNUMyNy4xNSAzMy41IDI4LjUgMzIuMTUgMjguNSAzMC41VjkuNUMyOC41IDcuODUgMjcuMTUgNi41IDI1LjUgNi41Wk0yNS41IDMwLjVIOVY5LjVIMjUuNVYzMC41WiIgZmlsbD0iIzFBMUExQiIvPgo8L3N2Zz4K)
 
 ### MongoDB
 
@@ -661,4 +661,4 @@ MongoDB는 `sleep` 함수를 제공합니다. 표현식과 함께 사용하면
 Errror based Injection은 에러를 기반으로 데이터를 알아내는 기법으로, 올바르지 않은 문법을 입력해 고의로 에러를 발생시킵니다. **Figure 10**를 살펴보면, `upw`의 첫 글자가 'g' 문자인 경우 올바르지 않은 문법인 `asdf`를 실행하면서 에러가 발생합니다.
 
 http://host1.dreamhack.games:13698/login?uid=guest&upw[$regex]=.*
-http://host1.dreamhack.games:13698/login?uid[$regex]=ad.in&upw[$regex]=D.{*
+http://host1.dreamhack.games:13698/login?uid[$regex]=admin&upw[$regex]=D.{*
